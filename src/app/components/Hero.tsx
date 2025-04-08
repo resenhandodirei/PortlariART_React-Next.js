@@ -6,7 +6,7 @@ export default function Hero() {
         <p className="text-lg mb-6">Desenvolvedora mobile, estudante de Direito e apaixonada por tecnologia e justiça social.</p>
         <a
           href="/cv-larissa.pdf"
-          className="bg-white text-[#8C0343] px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition"
+          className="bg-[#2D3766] text-white px-6 py-2 rounded-2xl font-semibold hover:bg-[#033867] transition"
           download
         >
           Baixar Currículo
