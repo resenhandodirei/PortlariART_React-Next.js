@@ -12,9 +12,9 @@ export default function Navbar() {
   }
 
   const links = [
-    { href: '#sobre', label: 'Sobre' },
-    { href: '#projetos', label: 'Projetos' },
-    { href: '#contato', label: 'Contato' },
+    { href: './screens/about', label: 'Sobre' },
+    { href: '/projetos', label: 'Projetos' },
+    { href: '/contato', label: 'Contato' },
   ]
 
   return (
