@@ -6,6 +6,7 @@ import ResumoSobreMim from "./components/ResumoSobreMim";
 import ProjetosDestaque from "./components/ProjetosDestaque";
 import SkillsPreview from "./components/SkillsPreview";
 import CallToAction from "./components/CallToAction";
+import SpotifyPlayer from "./components/SpotifyPlayer";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
     <ProjetosDestaque />
     <SkillsPreview />
     <CallToAction />
+    <SpotifyPlayer />
     <Footer />
     </>
   );
