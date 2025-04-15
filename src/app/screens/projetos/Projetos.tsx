@@ -9,11 +9,7 @@ export default function About() {
   return (
     <>
    <HeaderProjetos />
-   <ProjetoCard 
-      titulo="Example Title" 
-      descricao="Example Description" 
-      tecnologias={["React", "TypeScript"]} 
-   />
+   
     <GridDeProjetos />
     <ProjetosDestaque />
 

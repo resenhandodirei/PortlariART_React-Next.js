@@ -1,58 +1,58 @@
-import { ExternalLink, Github } from 'lucide-react'
+import Image from "next/image";
+import Link from "next/link";
 
 interface ProjetoCardProps {
-  titulo: string
-  descricao: string
-  tecnologias: string[]
-  linkDeploy?: string
-  linkRepositorio?: string
+  titulo: string;
+  descricao: string;
+  tecnologias: string[];
+  imagem: string;
+  link: string;
+  onClick?: () => void;
 }
 
-export default function ProjetoCard({
+const ProjetoCard = ({
   titulo,
   descricao,
   tecnologias,
-  linkDeploy,
-  linkRepositorio,
-}: ProjetoCardProps) {
+  imagem,
+  onClick,
+}: ProjetoCardProps) => {
+  const slug = titulo.toLowerCase().replace(/\s+/g, "-");
+
   return (
-    <div className="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition duration-300">
-      <h3 className="text-xl font-bold text-[#8C0343] mb-2">{titulo}</h3>
-      <p className="text-gray-700 mb-4">{descricao}</p>
-
-      <div className="flex flex-wrap gap-2 mb-4">
-        {tecnologias.map((tech, index) => (
-          <span
-            key={index}
-            className="bg-[#8C0343]/10 text-[#8C0343] text-xs px-3 py-1 rounded-full"
-          >
-            {tech}
-          </span>
-        ))}
-      </div>
-
-      <div className="flex gap-4">
-        {linkDeploy && (
-          <a
-            href={linkDeploy}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 text-sm text-[#8C0343] hover:underline"
-          >
-            <ExternalLink size={16} /> Ver Projeto
-          </a>
-        )}
-        {linkRepositorio && (
-          <a
-            href={linkRepositorio}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 text-sm text-gray-700 hover:underline"
-          >
-            <Github size={16} /> GitHub
-          </a>
-        )}
+    <div
+      onClick={onClick}
+      className="cursor-pointer rounded-xl shadow hover:shadow-md transition bg-white"
+    >
+      <Image
+        src={imagem}
+        alt={titulo}
+        width={500}
+        height={300}
+        className="rounded-t-xl object-cover h-48 w-full"
+      />
+      <div className="p-4">
+        <Link
+          href={`/projetos/${slug}`}
+          className="text-lg font-semibold text-[#8C0343] hover:underline"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {titulo}
+        </Link>
+        <p className="text-sm text-gray-600 mt-2">{descricao}</p>
+        <div className="flex flex-wrap gap-2 mt-4">
+          {tecnologias.map((tech, index) => (
+            <span
+              key={index}
+              className="bg-[#8C0343]/10 text-[#8C0343] text-xs px-3 py-1 rounded-full"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default ProjetoCard;
