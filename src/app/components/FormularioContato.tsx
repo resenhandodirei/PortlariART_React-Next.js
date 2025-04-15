@@ -1,94 +1,90 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
+import { useState } from "react";
 
-export default function FormularioContato() {
-  const [formData, setFormData] = useState({
-    nome: '',
-    email: '',
-    mensagem: '',
-  })
+const FormularioContato = () => {
+  const [form, setForm] = useState({
+    nome: "",
+    email: "",
+    mensagem: "",
+  });
 
-  const [mensagemEnviada, setMensagemEnviada] = useState(false)
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target
-    setFormData({ ...formData, [name]: value })
-  }
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    // Aqui você pode integrar com um serviço externo
-    console.log(formData)
-    setMensagemEnviada(true)
-    setFormData({ nome: '', email: '', mensagem: '' })
-  }
+    e.preventDefault();
+    alert("Mensagem enviada com sucesso!");
+    setForm({ nome: "", email: "", mensagem: "" });
+  };
 
   return (
-    <section className="px-6 py-12 bg-white">
-      <div className="max-w-3xl mx-auto">
-        <form onSubmit={handleSubmit} className="space-y-6 bg-gray-100 p-8 rounded-2xl shadow-lg">
-          <div>
-            <label htmlFor="nome" className="block text-sm font-medium text-gray-700">
-              Nome
-            </label>
-            <input
-              type="text"
-              name="nome"
-              id="nome"
-              required
-              value={formData.nome}
-              onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-[#8C0343] focus:border-[#8C0343]"
-            />
-          </div>
+    <section
+      id="formulario-contato"
+      className="bg-gradient-to-br from-white to-[#fff0f5] rounded-3xl p-8 md:p-12 shadow-2xl max-w-3xl mx-auto border border-[#fcd5e5] mt-10 mb-10"
+    >
+      <h3 className="text-3xl font-extrabold text-center text-[#8C0343] mb-8">
+        Me envie uma mensagem ✨
+      </h3>
 
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-gray-700">
-              E-mail
-            </label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              required
-              value={formData.email}
-              onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-[#8C0343] focus:border-[#8C0343]"
-            />
-          </div>
+      <form onSubmit={handleSubmit} className="space-y-6">
+        <div>
+          <label className="block mb-2 text-sm font-semibold text-[#8C0343]">
+            Nome
+          </label>
+          <input
+            type="text"
+            name="nome"
+            value={form.nome}
+            onChange={handleChange}
+            required
+            className="w-full p-4 rounded-xl border border-[#e2c0d2] bg-white placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#8C0343]/40 shadow-sm transition"
+            placeholder="Seu nome completo"
+          />
+        </div>
 
-          <div>
-            <label htmlFor="mensagem" className="block text-sm font-medium text-gray-700">
-              Mensagem
-            </label>
-            <textarea
-              name="mensagem"
-              id="mensagem"
-              rows={5}
-              required
-              value={formData.mensagem}
-              onChange={handleChange}
-              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-[#8C0343] focus:border-[#8C0343]"
-            ></textarea>
-          </div>
+        <div>
+          <label className="block mb-2 text-sm font-semibold text-[#8C0343]">
+            E-mail
+          </label>
+          <input
+            type="email"
+            name="email"
+            value={form.email}
+            onChange={handleChange}
+            required
+            className="w-full p-4 rounded-xl border border-[#e2c0d2] bg-white placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#8C0343]/40 shadow-sm transition"
+            placeholder="exemplo@email.com"
+          />
+        </div>
 
-          <div>
-            <button
-              type="submit"
-              className="bg-[#8C0343] text-white px-6 py-2 rounded-lg hover:bg-[#a40450] transition"
-            >
-              Enviar Mensagem
-            </button>
-          </div>
+        <div>
+          <label className="block mb-2 text-sm font-semibold text-[#8C0343]">
+            Mensagem
+          </label>
+          <textarea
+            name="mensagem"
+            value={form.mensagem}
+            onChange={handleChange}
+            required
+            rows={5}
+            className="w-full p-4 rounded-xl border border-[#e2c0d2] bg-white placeholder-gray-400 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#8C0343]/40 shadow-sm transition"
+            placeholder="Digite sua mensagem com carinho :)"
+          ></textarea>
+        </div>
 
-          {mensagemEnviada && (
-            <p className="text-green-600 text-sm mt-2">
-              Sua mensagem foi enviada com sucesso! 💌
-            </p>
-          )}
-        </form>
-      </div>
+        <button
+          type="submit"
+          className="w-full py-3 mt-2 bg-[#8C0343] hover:bg-[#6f0235] text-white font-bold rounded-full shadow-md transition"
+        >
+          Enviar mensagem 💖
+        </button>
+      </form>
     </section>
-  )
-}
+  );
+};
+
+export default FormularioContato;
