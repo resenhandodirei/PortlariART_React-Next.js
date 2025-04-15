@@ -4,6 +4,7 @@ import Timeline from "@/app/components/Timeline";
 import StacksConhecidas from "@/app/components/StacksConhecidas";
 import CuriosidadesSobreMim from "@/app/components/CuriosidadesSobreMim";
 import CTAContato from "@/app/components/CTAContato";
+import SoftSkills from "@/app/components/SoftSkills";
 
 import React from "react";
 
@@ -14,6 +15,7 @@ export default function About() {
     <BioDetalhada />
     <Timeline />
     <StacksConhecidas />
+    <SoftSkills />
     <CuriosidadesSobreMim />
     <CTAContato />
 
