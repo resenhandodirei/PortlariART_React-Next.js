@@ -61,7 +61,7 @@ const GridDeProjetos = () => {
               className="rounded-xl shadow hover:shadow-lg transition bg-white overflow-hidden"
             >
               {/* Corrigido: <Link> envolve diretamente o conteúdo */}
-              <Link href={`/projetos/${slug}`}>
+              <Link href={`/screens/projetos/${slug}`}>
                 <Image
                   src={projeto.imagem}
                   alt={projeto.titulo}
