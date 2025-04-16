@@ -1,6 +1,7 @@
 import projetos from "../../../../data/projetos";
 import GaleriaImagens from "@/app/components/GaleriaImagens";
 import LikeDislike from "@/app/components/LikeDislike";
+import TopicosInformativos from "@/app/components/TopicosInformativos";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 
@@ -44,6 +45,7 @@ const ProjetoDetalhado = ({ params }: ProjetoDetalhadoProps) => {
         </div>
       </section>
 
+      <TopicosInformativos />
       <Footer />
     </>
   );
