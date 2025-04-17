@@ -2,6 +2,10 @@ import projetos from "../../../../data/projetos";
 import GaleriaImagens from "@/app/components/GaleriaImagens";
 import LikeDislike from "@/app/components/LikeDislike";
 import TopicosInformativos from "@/app/components/TopicosInformativos";
+import { BlocoTecnologias } from "@/app/components/BlocoTecnologias";
+import ProjetoDetalhadoComponent from "@/app/components/ProjetoDetalhado";
+import LinksProjeto from "@/app/components/LinksProjeto";
+import NavegacaoProjetos from "@/app/components/NavegacaoProjetos";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 
@@ -11,7 +15,7 @@ interface ProjetoDetalhadoProps {
   };
 }
 
-const ProjetoDetalhado = ({ params }: ProjetoDetalhadoProps) => {
+const ProjetoDetalhadoPage = ({ params }: ProjetoDetalhadoProps) => {
   const projeto = projetos.find((p) => p.slug === params.slug);
 
   if (!projeto) {
@@ -46,9 +50,16 @@ const ProjetoDetalhado = ({ params }: ProjetoDetalhadoProps) => {
       </section>
 
       <TopicosInformativos />
+      <div className="max-w-6xl mx-auto px-4 mt-10">
+        <BlocoTecnologias tecnologias={projeto.tecnologias} />
+      </div>
+
+      <LinksProjeto repositorio={projeto.repositorio} deploy={projeto.deploy} />
+      <NavegacaoProjetos projetos={projetos} atualSlug={params.slug} />
+
       <Footer />
     </>
   );
 };
 
-export default ProjetoDetalhado;
+export default ProjetoDetalhadoPage;

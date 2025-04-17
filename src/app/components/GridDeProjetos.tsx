@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import projetos from "../../data/projetos";
+import projetos from "@/data/projetos";
 import { useState } from "react";
 import { motion } from "framer-motion";
 

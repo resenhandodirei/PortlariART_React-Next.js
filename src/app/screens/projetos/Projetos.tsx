@@ -5,7 +5,7 @@ import ProjetosDestaque from "@/app/components/ProjetosDestaque";
 
 import React from "react";
 
-export default function About() {
+export default function Projetos() {
   return (
     <>
    <HeaderProjetos />
