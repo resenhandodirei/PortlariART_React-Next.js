@@ -1,0 +1,25 @@
+.swiper-button-prev,
+.swiper-button-next {
+  color: #8C0343;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 12px;
+  border-radius: 9999px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+}
+
+.swiper-button-prev {
+  left: -30px;
+}
+
+.swiper-button-next {
+  right: -30px;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: #8C0343;
+  color: white;
+}

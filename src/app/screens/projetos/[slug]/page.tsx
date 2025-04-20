@@ -6,6 +6,7 @@ import { BlocoTecnologias } from "@/app/components/BlocoTecnologias";
 import ProjetoDetalhadoComponent from "@/app/components/ProjetoDetalhado";
 import LinksProjeto from "@/app/components/LinksProjeto";
 import NavegacaoProjetos from "@/app/components/NavegacaoProjetos";
+import BotaoContato from "@/app/components/BotaoContato";
 import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 
@@ -56,6 +57,7 @@ const ProjetoDetalhadoPage = ({ params }: ProjetoDetalhadoProps) => {
 
       <LinksProjeto repositorio={projeto.repositorio} deploy={projeto.deploy} />
       <NavegacaoProjetos projetos={projetos} atualSlug={params.slug} />
+      <BotaoContato />
 
       <Footer />
     </>
