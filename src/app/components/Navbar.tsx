@@ -21,8 +21,10 @@ export default function Navbar() {
     <nav className="bg-[#8C0343] text-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo / Nome */}
-          <div className="text-lg font-bold">PortlariART</div>
+          {/* Logo / Nome clicável */}
+          <Link href="/" className="text-lg font-bold hover:opacity-90 transition-colors">
+            PortlariART
+          </Link>
 
           {/* Botão mobile */}
           <div className="md:hidden">
@@ -32,14 +34,14 @@ export default function Navbar() {
           </div>
 
           {/* Links desktop */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex space-x-8">
             {links.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="relative hover:text-gray-100 transition"
+                className="relative group hover:text-gray-100 transition-all ease-in-out duration-300"
               >
-                <span className="after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 hover:after:w-full">
+                <span className="after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-white after:transition-all after:duration-300 group-hover:after:w-full">
                   {label}
                 </span>
               </Link>
@@ -50,13 +52,13 @@ export default function Navbar() {
 
       {/* Menu mobile */}
       {menuAberto && (
-        <div className="md:hidden px-4 pb-4 space-y-2 bg-[#8C0343]">
+        <div className="md:hidden px-4 pb-4 space-y-2 bg-[#8C0343] transition-all ease-in-out duration-300">
           {links.map(({ href, label }) => (
             <Link
               key={href}
               href={href}
               onClick={() => setMenuAberto(false)} // Fecha ao clicar
-              className="block py-2 border-b border-white text-white hover:opacity-80"
+              className="block py-2 border-b border-white text-white hover:opacity-80 transition-all ease-in-out duration-200"
             >
               {label}
             </Link>

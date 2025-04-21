@@ -13,10 +13,10 @@ export default function About() {
     <>
     <HeaderAbout />
     <BioDetalhada />
+    <CuriosidadesSobreMim />
     <Timeline />
     <StacksConhecidas />
     <SoftSkills />
-    <CuriosidadesSobreMim />
     <CTAContato />
 
     </>

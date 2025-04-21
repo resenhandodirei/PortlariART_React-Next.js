@@ -1,4 +1,6 @@
 export interface ProjetoDetalhado {
+  deploy: string | undefined;
+  repositorio: string | undefined;
   slug: string;
   titulo: string;
   descricao: string;
@@ -25,12 +27,13 @@ export const projetos: ProjetoDetalhado[] = [
       "/images/agendapsico3.png",
     ],
     tecnologias: ["PHP", "PostgreSQL", "Bootstrap"],
+    deploy: undefined,
+    repositorio: undefined,
     objetivos: "Criar uma ferramenta que auxilie profissionais da psicologia a organizarem sua rotina de atendimentos.",
     aprendizados: "Integração de API de calendário, manipulação de datas, organização de rotas em PHP e SQL avançado.",
     diferenciais: "Interface pensada para não causar fadiga visual, campos de agendamento simplificados, foco na produtividade.",
-    destaque: "Primeiro sistema completo com backend e banco de dados feito por mim com foco em um nicho específico.",
   },
-  {
+    {
     titulo: "Fila Med",
     slug: "fila-med",
     descricao: "Aplicativo para organização de filas em clínicas...",
@@ -42,6 +45,8 @@ export const projetos: ProjetoDetalhado[] = [
       "/images/fila-med3.png",
     ],
     tecnologias: ["React", "Node.js"],
+    deploy: undefined,
+    repositorio: undefined,
     objetivos: "Desenvolver um app moderno para otimizar o processo de atendimento em clínicas, evitando aglomerações e confusões.",
     aprendizados: "Comunicação entre front-end e back-end com React e Node, lógica de geração de senhas, manipulação de filas em tempo real.",
     diferenciais: "Design focado na área da saúde, animações sutis para melhorar a experiência do usuário, responsividade total.",

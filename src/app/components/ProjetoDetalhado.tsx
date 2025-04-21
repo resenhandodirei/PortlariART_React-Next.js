@@ -1,4 +1,4 @@
-import { ProjetoDetalhado as ProjetoDetalhadoType } from "@/data/projeto";
+import { ProjetoDetalhado as ProjetoDetalhadoType } from "@/data/projetos";
 import { BlocoTecnologias } from "./BlocoTecnologias";
 
 interface Props {
