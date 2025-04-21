@@ -12,7 +12,7 @@ const projetos = [
   { nome: "DelicQueue", descricao: "Gerador de senhas interativo com estética gastronômica.", cor: "#F9A825", tecnologia: "React Native" },
   { nome: "CoinVerter", descricao: "Conversor de moedas simples e direto ao ponto.", cor: "#039BE5", tecnologia: "React" },
   { nome: "AgendaPsico", descricao: "Sistema para agendamentos em clínicas psicológicas.", cor: "#F44336", tecnologia: "PHP + PostgreSQL" },
-  { nome: "Jovem Defensorinha", descricao: "Plataforma de apoio para estudos jurídicos.", cor: "#8C0343", tecnologia: "Next.js" },
+  { nome: "MoneyQueen", descricao: "Plataforma de apoio financeiro para jovens senhoras.", cor: "#8C0343", tecnologia: "Next.js" },
 ];
 
 export default function ProjetosDestaque() {

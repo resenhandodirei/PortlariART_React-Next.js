@@ -18,7 +18,7 @@ export default function StacksConhecidas() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-16 bg-gradient-to-r from-[#8C0343] to-[#F0F8FF] rounded-lg">
       <h2 className="text-3xl font-bold text-center text-white mb-12">
-        Stacks que conheço
+        Stacks
       </h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 justify-items-center">
         {stacks.map((stack, index) => (

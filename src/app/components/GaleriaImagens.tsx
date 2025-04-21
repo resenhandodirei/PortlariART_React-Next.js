@@ -14,7 +14,7 @@ interface GaleriaImagensProps {
 
 const GaleriaImagens = ({ imagens }: GaleriaImagensProps) => {
   return (
-    <div className="my-8">
+    <div className="my-8 mb-5">
       <Swiper
         modules={[Navigation, Pagination]}
         spaceBetween={10}
