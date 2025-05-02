@@ -11,8 +11,8 @@ export default function Projetos() {
     <>
    <HeaderProjetos />
    
-    <GridDeProjetos />
-    <ProjetosDestaque />
+   <GridDeProjetos />
+   <ProjetosDestaque />
     
 
 

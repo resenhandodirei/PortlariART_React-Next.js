@@ -53,9 +53,9 @@ export default function BioDetalhada() {
               <h3 className="text-xl font-medium">Experiência</h3>
             </div>
             <ul className="list-disc list-inside text-gray-700">
-              <li>Residente em TIC — Desenvolvimento iOS e Chatbots</li>
-              <li>Estágio em T.I — Órgão público municipal</li>
-              <li>Corretora de redações voluntária — Salvaguarda</li>
+              <li>Residente em TIC — Desenvolvimento iOS</li>
+              <li>Estágio em T.I — Prefeitura Municipal de Fortaleza</li>
+              <li>Corretora e professora de redações voluntária — Salvaguarda</li>
               <li>Projetos com foco em Data Science e Machine Learning</li>
             </ul>
           </motion.div>
@@ -73,10 +73,10 @@ export default function BioDetalhada() {
               <h3 className="text-xl font-medium">Habilidades Técnicas</h3>
             </div>
             <ul className="list-disc list-inside text-gray-700">
-              <li>React, React Native, SwiftUI, Node.js</li>
-              <li>PostgreSQL, Firebase, JWT</li>
+              <li>JavaScript, React, React Native, SwiftUI, Node.js, Java, Kotlin</li>
+              <li>PostgreSQL, MongoDB, MYSQL, Firebase, JWT</li>
               <li>Python (ML, IA, Pandas, NumPy)</li>
-              <li>Figma, Git, Metodologias Ágeis</li>
+              <li>Git, Metodologias Ágeis, Scrum, Trello</li>
             </ul>
           </motion.div>
 
