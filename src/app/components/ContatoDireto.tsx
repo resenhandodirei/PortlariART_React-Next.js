@@ -7,23 +7,23 @@ export default function ContatoDireto() {
   const contatos = [
     {
       icone: <Mail size={20} />,
-      texto: 'larissa@email.com',
-      link: 'mailto:larissa@email.com',
+      texto: 'larimscorrea@gmail.com',
+      link: 'mailto:larimscorrea@gmail.com',
     },
     {
       icone: <Linkedin size={20} />,
-      texto: 'linkedin.com/in/larissacorrea',
-      link: 'https://www.linkedin.com/in/larissacorrea',
+      texto: 'linkedin.com/in/resenhandodirei',
+      link: 'https://www.linkedin.com/in/resenhandodirei',
     },
     {
       icone: <Instagram size={20} />,
-      texto: '@larimscorrea',
-      link: 'https://www.instagram.com/larimscorrea',
+      texto: '@resenhandodirei',
+      link: 'https://www.instagram.com/resenhandodirei',
     },
     {
       icone: <Phone size={20} />,
-      texto: '(85) 9 9999-9999',
-      link: 'https://wa.me/5585999999999',
+      texto: '(85) 9 91984587',
+      link: 'https://wa.me/558599198-4587',
     },
   ]
 
